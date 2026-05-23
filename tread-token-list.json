@@ -1,0 +1,23 @@
+{
+  "name": "TREAD Token List",
+  "timestamp": "2026-05-23T23:32:29Z",
+  "version": {
+    "major": 1,
+    "minor": 0,
+    "patch": 0
+  },
+  "tokens": [
+    {
+      "chainId": 84532,
+      "address": "0x365E2c05a6368e3415d3CD220D9899A2BE4A7ae5",
+      "name": "Tread On Me Daddy Coin",
+      "symbol": "TREAD",
+      "decimals": 18,
+      "logoURI": "https://raw.githubusercontent.com/Marilyn2015/tread-token-assets/main/tread-on-me-daddy-token-logo-512.png",
+      "extensions": {
+        "website": "https://github.com/Marilyn2015/tread-token-assets",
+        "description": "A political satire meme token. No intrinsic value. No promised returns."
+      }
+    }
+  ]
+}
