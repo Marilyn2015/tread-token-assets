@@ -10,7 +10,7 @@
 
   <meta property="og:title" content="Tread On Me Daddy Coin | $TREAD" />
   <meta property="og:description" content="Freedom cosplay. Authoritarian results. A political satire meme token on Base." />
-  <meta property="og:image" content="tread-on-me-daddy-token-logo-512.png" />
+  <meta property="og:image" content="https://raw.githubusercontent.com/Marilyn2015/tread-token-assets/main/tread-on-me-daddy-token-logo-512.png" />
   <meta property="og:type" content="website" />
 
   <style>
@@ -108,11 +108,16 @@
     }
 
     .brand img {
-      width: 40px;
-      height: 40px;
-      border-radius: 13px;
+      width: 46px;
+      height: 46px;
+      min-width: 46px;
+      border-radius: 14px;
       object-fit: cover;
-      box-shadow: 0 0 24px rgba(255, 212, 0, 0.34);
+      background: var(--yellow);
+      border: 1px solid rgba(255, 212, 0, 0.55);
+      box-shadow:
+        0 0 0 3px rgba(255, 212, 0, 0.10),
+        0 0 32px rgba(255, 212, 0, 0.46);
     }
 
     .brand strong {
@@ -255,7 +260,12 @@
       aspect-ratio: 1 / 1;
       border-radius: 30px;
       object-fit: cover;
-      box-shadow: 0 30px 90px rgba(0, 0, 0, 0.58);
+      background: var(--yellow);
+      border: 1px solid rgba(255, 212, 0, 0.50);
+      box-shadow:
+        0 30px 90px rgba(0, 0, 0, 0.58),
+        0 0 0 6px rgba(255, 212, 0, 0.08),
+        0 0 70px rgba(255, 212, 0, 0.26);
       animation: floaty 5s ease-in-out infinite;
     }
 
@@ -449,25 +459,129 @@
     }
 
     @media (max-width: 850px) {
-      .hero {
-        grid-template-columns: 1fr;
-        margin-top: 34px;
+      body {
+        background:
+          radial-gradient(circle at 50% 0%, rgba(255, 212, 0, 0.24), transparent 32%),
+          linear-gradient(135deg, #050505 0%, #121006 58%, #050505 100%);
       }
 
-      .logoCard { min-height: unset; }
+      .nav {
+        width: min(100% - 20px, 560px);
+        margin-top: 10px;
+        padding: 10px;
+        align-items: stretch;
+        border-radius: 22px;
+        flex-direction: column;
+        gap: 10px;
+        position: relative;
+        top: auto;
+      }
+
+      .brand {
+        width: 100%;
+        justify-content: center;
+        gap: 10px;
+      }
+
+      .brand img {
+        width: 54px;
+        height: 54px;
+        min-width: 54px;
+        border-radius: 16px;
+      }
+
+      .brand strong {
+        font-size: 13px;
+        white-space: normal;
+        text-align: left;
+        line-height: 1.1;
+      }
+
+      .navLinks {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 8px;
+      }
+
+      .pill {
+        text-align: center;
+        padding: 10px 8px;
+      }
+
+      .hero {
+        width: min(100% - 20px, 560px);
+        grid-template-columns: 1fr;
+        margin-top: 18px;
+        gap: 18px;
+      }
+
+      .hero > div:first-child {
+        order: 2;
+      }
+
+      .logoCard {
+        order: 1;
+        min-height: 250px;
+        padding: 12px;
+        border-radius: 26px;
+      }
+
+      .tokenLogo {
+        width: min(78vw, 310px);
+        border-radius: 24px;
+      }
+
+      .kicker {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+        font-size: 11px;
+        padding: 8px 10px;
+      }
+
+      h1 {
+        text-align: center;
+        font-size: clamp(40px, 15vw, 70px);
+        line-height: 0.92;
+        letter-spacing: -0.075em;
+      }
+
+      .tagline {
+        text-align: center;
+        font-size: 16px;
+        line-height: 1.42;
+        margin-top: 16px;
+      }
+
+      .heroActions {
+        margin-top: 20px;
+        gap: 10px;
+      }
+
+      .btn {
+        width: 100%;
+        min-height: 48px;
+      }
 
       .grid,
       .miniStats {
         grid-template-columns: 1fr;
       }
 
-      .nav {
-        align-items: flex-start;
-        border-radius: 24px;
-        flex-direction: column;
+      .miniStats {
+        gap: 10px;
       }
 
-      .navLinks { justify-content: flex-start; }
+      .section,
+      .footer {
+        width: min(100% - 20px, 560px);
+      }
+
+      .card {
+        padding: 18px;
+        border-radius: 22px;
+      }
 
       .tokenTable td {
         display: block;
@@ -484,12 +598,32 @@
 
       .tokenTable tr:last-child { border-bottom: 0; }
 
-      .btn {
+      .copyBox {
+        align-items: stretch;
+        flex-direction: column;
+      }
+
+      .copyBox code {
+        font-size: 11px;
+        line-height: 1.4;
+      }
+
+      .copyBox button {
         width: 100%;
+      }
+    }
+
+    @media (max-width: 390px) {
+      .brand strong {
+        font-size: 12px;
+      }
+
+      .tokenLogo {
+        width: min(84vw, 292px);
       }
 
       h1 {
-        font-size: clamp(42px, 14vw, 72px);
+        font-size: clamp(36px, 15vw, 58px);
       }
     }
   </style>
@@ -499,7 +633,7 @@
   <main class="page">
     <nav class="nav">
       <a class="brand" href="#top" aria-label="Tread On Me Daddy Coin">
-        <img src="tread-on-me-daddy-token-logo-512.png" alt="TREAD logo" />
+        <img src="https://raw.githubusercontent.com/Marilyn2015/tread-token-assets/main/tread-on-me-daddy-token-logo-512.png" alt="TREAD logo" />
         <strong>Tread On Me Daddy</strong>
       </a>
 
@@ -544,7 +678,7 @@
       </div>
 
       <div class="logoCard">
-        <img class="tokenLogo" src="tread-on-me-daddy-token-logo-512.png" alt="Tread On Me Daddy Coin logo" />
+        <img class="tokenLogo" src="https://raw.githubusercontent.com/Marilyn2015/tread-token-assets/main/tread-on-me-daddy-token-logo-512.png" alt="Tread On Me Daddy Coin logo" />
       </div>
     </section>
 
